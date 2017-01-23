@@ -14,6 +14,8 @@
 		ED54286A1E3683F5000EC5B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5428691E3683F5000EC5B8 /* Assets.xcassets */; };
 		ED54286D1E3683F5000EC5B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED54286B1E3683F5000EC5B8 /* LaunchScreen.storyboard */; };
 		ED5428761E368A39000EC5B8 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5428751E368A39000EC5B8 /* MovieCell.m */; };
+		ED62F6461E36A5A4002B3927 /* Flick.m in Sources */ = {isa = PBXBuildFile; fileRef = ED62F6451E36A5A4002B3927 /* Flick.m */; };
+		ED9397BB1E36AA2B00E9A8EB /* APICaller.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9397BA1E36AA2B00E9A8EB /* APICaller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		ED54286E1E3683F5000EC5B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED5428741E368A39000EC5B8 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		ED5428751E368A39000EC5B8 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		ED62F6441E36A5A4002B3927 /* Flick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flick.h; sourceTree = "<group>"; };
+		ED62F6451E36A5A4002B3927 /* Flick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flick.m; sourceTree = "<group>"; };
+		ED9397B91E36AA2B00E9A8EB /* APICaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APICaller.h; sourceTree = "<group>"; };
+		ED9397BA1E36AA2B00E9A8EB /* APICaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APICaller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,8 @@
 		ED54285C1E3683F5000EC5B8 /* Flicks */ = {
 			isa = PBXGroup;
 			children = (
+				ED9397B81E36AA0C00E9A8EB /* APICall */,
+				ED62F6431E36A575002B3927 /* Models */,
 				ED5428601E3683F5000EC5B8 /* AppDelegate.h */,
 				ED5428611E3683F5000EC5B8 /* AppDelegate.m */,
 				ED5428631E3683F5000EC5B8 /* ViewController.h */,
@@ -82,6 +90,24 @@
 				ED54285E1E3683F5000EC5B8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED62F6431E36A575002B3927 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED62F6441E36A5A4002B3927 /* Flick.h */,
+				ED62F6451E36A5A4002B3927 /* Flick.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		ED9397B81E36AA0C00E9A8EB /* APICall */ = {
+			isa = PBXGroup;
+			children = (
+				ED9397B91E36AA2B00E9A8EB /* APICaller.h */,
+				ED9397BA1E36AA2B00E9A8EB /* APICaller.m */,
+			);
+			name = APICall;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,7 +184,9 @@
 				ED5428651E3683F5000EC5B8 /* ViewController.m in Sources */,
 				ED5428621E3683F5000EC5B8 /* AppDelegate.m in Sources */,
 				ED5428761E368A39000EC5B8 /* MovieCell.m in Sources */,
+				ED62F6461E36A5A4002B3927 /* Flick.m in Sources */,
 				ED54285F1E3683F5000EC5B8 /* main.m in Sources */,
+				ED9397BB1E36AA2B00E9A8EB /* APICaller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +343,7 @@
 				ED5428731E3683F5000EC5B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
