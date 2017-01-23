@@ -15,7 +15,9 @@
     if(self){
         self.title = jsonDictionary[@"original_title"];
         self.summary = jsonDictionary[@"overview"];
-        NSString *urlString = [NSString stringWithFormat:@"https://image.tmdb.org/t/p/w45@", jsonDictionary[@"poster_path"]];
+        NSString *urlString = [NSString stringWithFormat:@"https://image.tmdb.org/t/p/w45%@", jsonDictionary[@"poster_path"]];
+        self.posterURL = [NSURL URLWithString:urlString];
+        
     }
     return self;
 }

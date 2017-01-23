@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "MovieCell.h"
 #import "Flick.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
+
 
 @interface ViewController () <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *movieTableView;
@@ -81,7 +83,7 @@
     MovieCell *movieCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell" forIndexPath:indexPath];
     movieCell.titleLabel.text = flick.title;
     movieCell.posterBody.text = flick.summary;
-    movieCell.posterImage.image = [UIImage imageNamed:@"/Users/leano/Desktop/Yahoo.png"];
+    [movieCell.posterImage setImageWithURL: flick.posterURL];
     NSLog(@"row number:@%ld", indexPath.row);
     return movieCell;
     
