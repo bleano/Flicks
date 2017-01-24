@@ -11,6 +11,7 @@
 #import "Flick.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import "FlickDetailsViewController.h"
+#import <MBProgressHUD.h>
 
 @interface ViewController () <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *movieTableView;
@@ -35,6 +36,7 @@
         flickDetail.flickId = flick.flickId;
         flickDetail.posterPath = flick.posterPath;
         flickDetail.flickDescription = flick.summary;
+        flickDetail.flickTitle = flick.title;
     }
 }
 
@@ -45,6 +47,7 @@
 }
 
 - (void) fetchFlicks {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSString *apiKey = @"ada044d36f9975bd000fd457db65d01d";
     NSString *urlString =
     [@"https://api.themoviedb.org/3/movie/now_playing?api_key=" stringByAppendingString:apiKey];
@@ -84,6 +87,7 @@
                 [flicks addObject: flick];
             }
             self.flicks = flicks;
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             [self performSelectorOnMainThread:@selector(reload) withObject:nil waitUntilDone:NO];
             
         } else {
@@ -91,12 +95,12 @@
         }
     
     }];
+
     [task resume];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-        NSLog(@"viewWillAppear restorationIdentifier: %@", self.restorationIdentifier);
-        [self fetchFlicks];
+    [self fetchFlicks];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

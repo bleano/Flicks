@@ -11,6 +11,7 @@
 
 @interface FlickDetailsViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *flickDetailImageView;
+@property (weak, nonatomic) IBOutlet UITextView *flickTextView;
 @property (weak, nonatomic) IBOutlet UILabel *flickDetailDescription;
 
 @end
@@ -21,7 +22,16 @@
     [super viewDidLoad];
     NSString *urlString = [NSString stringWithFormat:@"https://image.tmdb.org/t/p/original%@", self.posterPath];
     [self.flickDetailImageView setImageWithURL: [NSURL URLWithString:urlString]];
-    self.flickDetailDescription.text = self.flickDescription;
+    self.flickScrollView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0);
+    CGFloat contentOffsetY = 180 + CGRectGetHeight(self.flickDetailContentView.bounds);
+    self.flickScrollView.contentSize = CGSizeMake(self.flickScrollView.bounds.size.width, contentOffsetY);
+//    self.flickScrollView.backgroundColor = [UIColor yellowColor];
+    self.flickDetailContentView.backgroundColor = [UIColor blackColor];
+    self.flickDetailTitle.text = self.flickTitle;
+    self.flickDetailTitle.textColor = [UIColor whiteColor];
+    self.flickTextView.text = self.flickDescription;
+    self.flickTextView.textColor = [UIColor whiteColor];
+    self.flickTextView.backgroundColor = [UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning {

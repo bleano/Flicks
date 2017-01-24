@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *posterImage;
 @property (weak, nonatomic) IBOutlet UITextView *posterBody;
 @property (strong, nonatomic) NSString *flickId;
+@property (strong, nonatomic) NSString *title;
 @end
