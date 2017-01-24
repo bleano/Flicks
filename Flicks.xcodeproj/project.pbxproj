@@ -16,6 +16,7 @@
 		ED54286D1E3683F5000EC5B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED54286B1E3683F5000EC5B8 /* LaunchScreen.storyboard */; };
 		ED5428761E368A39000EC5B8 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5428751E368A39000EC5B8 /* MovieCell.m */; };
 		ED62F6461E36A5A4002B3927 /* Flick.m in Sources */ = {isa = PBXBuildFile; fileRef = ED62F6451E36A5A4002B3927 /* Flick.m */; };
+		ED869B5D1E37D5D00011855B /* FlickDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED869B5C1E37D5D00011855B /* FlickDetailsViewController.m */; };
 		ED9397BB1E36AA2B00E9A8EB /* APICaller.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9397BA1E36AA2B00E9A8EB /* APICaller.m */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,8 @@
 		ED5428751E368A39000EC5B8 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 		ED62F6441E36A5A4002B3927 /* Flick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flick.h; sourceTree = "<group>"; };
 		ED62F6451E36A5A4002B3927 /* Flick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flick.m; sourceTree = "<group>"; };
+		ED869B5B1E37D5D00011855B /* FlickDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickDetailsViewController.h; sourceTree = "<group>"; };
+		ED869B5C1E37D5D00011855B /* FlickDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickDetailsViewController.m; sourceTree = "<group>"; };
 		ED9397B91E36AA2B00E9A8EB /* APICaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APICaller.h; sourceTree = "<group>"; };
 		ED9397BA1E36AA2B00E9A8EB /* APICaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APICaller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +101,8 @@
 				ED5428631E3683F5000EC5B8 /* ViewController.h */,
 				ED5428641E3683F5000EC5B8 /* ViewController.m */,
 				ED5428661E3683F5000EC5B8 /* Main.storyboard */,
+				ED869B5B1E37D5D00011855B /* FlickDetailsViewController.h */,
+				ED869B5C1E37D5D00011855B /* FlickDetailsViewController.m */,
 				ED5428741E368A39000EC5B8 /* MovieCell.h */,
 				ED5428751E368A39000EC5B8 /* MovieCell.m */,
 				ED5428691E3683F5000EC5B8 /* Assets.xcassets */,
@@ -262,6 +267,7 @@
 				ED62F6461E36A5A4002B3927 /* Flick.m in Sources */,
 				ED54285F1E3683F5000EC5B8 /* main.m in Sources */,
 				ED9397BB1E36AA2B00E9A8EB /* APICaller.m in Sources */,
+				ED869B5D1E37D5D00011855B /* FlickDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
