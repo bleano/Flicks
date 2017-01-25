@@ -29,6 +29,7 @@
     self.flickDetailContentView.backgroundColor = [UIColor blackColor];
     self.flickDetailTitle.text = self.flickTitle;
     self.flickDetailTitle.textColor = [UIColor whiteColor];
+    [self.flickTextView sizeToFit];
     self.flickTextView.text = self.flickDescription;
     self.flickTextView.textColor = [UIColor whiteColor];
     self.flickTextView.backgroundColor = [UIColor blackColor];

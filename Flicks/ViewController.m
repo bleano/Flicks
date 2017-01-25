@@ -132,6 +132,7 @@
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     Flick *flick = [self.flicks objectAtIndex:indexPath.row];
     MovieCell *movieCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell" forIndexPath:indexPath];
+    [movieCell.posterBody sizeToFit];
     movieCell.titleLabel.text = flick.title;
     movieCell.posterBody.text = flick.summary;
     movieCell.flickId = flick.flickId;
