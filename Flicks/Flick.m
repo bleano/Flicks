@@ -16,7 +16,7 @@
         self.title = jsonDictionary[@"original_title"];
         self.summary = jsonDictionary[@"overview"];
         self.flickId = ((NSNumber*)jsonDictionary[@"id"]).stringValue;
-        NSString *urlString = [NSString stringWithFormat:@"https://image.tmdb.org/t/p/w45%@", jsonDictionary[@"poster_path"]];
+        NSString *urlString = [NSString stringWithFormat:@"https://image.tmdb.org/t/p/original%@", jsonDictionary[@"poster_path"]];
         NSLog(@">>>image urlString: %@", urlString);
         self.posterURL = [NSURL URLWithString:urlString];
         self.posterPath = jsonDictionary[@"poster_path"];

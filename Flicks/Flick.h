@@ -15,5 +15,4 @@
 @property (nonatomic, strong) NSString *flickId;
 @property (nonatomic, strong) NSString *posterPath;
 - (instancetype) initWithDictionary: (NSDictionary *) jsonDictionary;
-- (NSString*) getDescription;
 @end
