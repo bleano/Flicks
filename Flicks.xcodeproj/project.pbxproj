@@ -93,6 +93,17 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		ED0FD3AD1E39734B00EDF74C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED5428741E368A39000EC5B8 /* MovieCell.h */,
+				ED5428751E368A39000EC5B8 /* MovieCell.m */,
+				ED1841511E396B3D00295866 /* SystemMessageView.h */,
+				ED1841521E396B3D00295866 /* SystemMessageView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		ED5428511E3683F5000EC5B8 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +125,7 @@
 		ED54285C1E3683F5000EC5B8 /* Flicks */ = {
 			isa = PBXGroup;
 			children = (
+				ED0FD3AD1E39734B00EDF74C /* Views */,
 				ED0FD3AC1E3972E000EDF74C /* Controllers */,
 				EDB7E1D01E3843FD00983419 /* Images */,
 				ED9397B81E36AA0C00E9A8EB /* APICall */,
@@ -121,14 +133,10 @@
 				ED5428601E3683F5000EC5B8 /* AppDelegate.h */,
 				ED5428611E3683F5000EC5B8 /* AppDelegate.m */,
 				ED5428661E3683F5000EC5B8 /* Main.storyboard */,
-				ED5428741E368A39000EC5B8 /* MovieCell.h */,
-				ED5428751E368A39000EC5B8 /* MovieCell.m */,
 				ED5428691E3683F5000EC5B8 /* Assets.xcassets */,
 				ED54286B1E3683F5000EC5B8 /* LaunchScreen.storyboard */,
 				ED54286E1E3683F5000EC5B8 /* Info.plist */,
 				ED54285D1E3683F5000EC5B8 /* Supporting Files */,
-				ED1841511E396B3D00295866 /* SystemMessageView.h */,
-				ED1841521E396B3D00295866 /* SystemMessageView.m */,
 			);
 			path = Flicks;
 			sourceTree = "<group>";
