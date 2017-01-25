@@ -15,13 +15,16 @@
 
 @interface ViewController () <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *movieTableView;
+@property (weak, nonatomic) IBOutlet UIView *systemMessageView;
 @property (strong, nonatomic) NSArray<Flick *> *flicks;
+@property (weak, nonatomic) IBOutlet UILabel *systemMessageLable;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.systemMessageView.hidden = true;
     self.movieTableView.dataSource = self;
     NSLog(@"toolbarItems: %@", self.tabBarController.toolbarItems);
 
@@ -97,6 +100,8 @@
             self.flicks = flicks;
             [self performSelectorOnMainThread:@selector(reload) withObject:nil waitUntilDone:NO];
          } else {
+             self.systemMessageView.hidden = false;
+             self.systemMessageLable.text = @"NetworkError";
             NSLog(@"An error occurred: %@", error.description);
         }
         [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -107,6 +112,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    self.systemMessageView.hidden = true;
     [self fetchFlicks];
 }
 

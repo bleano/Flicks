@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8A5BFC585BE7E5C09EFE9D87 /* libPods-Flicks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7ACBB8A1A45BA03FA88147E /* libPods-Flicks.a */; };
+		ED1841501E3967B300295866 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = ED18414F1E3967B300295866 /* error.png */; };
+		ED1841531E396B3D00295866 /* SystemMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1841521E396B3D00295866 /* SystemMessageView.m */; };
 		ED54285F1E3683F5000EC5B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED54285E1E3683F5000EC5B8 /* main.m */; };
 		ED5428621E3683F5000EC5B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5428611E3683F5000EC5B8 /* AppDelegate.m */; };
 		ED5428651E3683F5000EC5B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5428641E3683F5000EC5B8 /* ViewController.m */; };
@@ -26,6 +28,9 @@
 		890ABE961552759CCEBD5DCF /* Pods-Flicks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flicks/Pods-Flicks.release.xcconfig"; sourceTree = "<group>"; };
 		C3F5599A357FBE1C3F6AB9DD /* Pods-Flicks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flicks/Pods-Flicks.debug.xcconfig"; sourceTree = "<group>"; };
 		D7ACBB8A1A45BA03FA88147E /* libPods-Flicks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Flicks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED18414F1E3967B300295866 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
+		ED1841511E396B3D00295866 /* SystemMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemMessageView.h; sourceTree = "<group>"; };
+		ED1841521E396B3D00295866 /* SystemMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemMessageView.m; sourceTree = "<group>"; };
 		ED54285A1E3683F5000EC5B8 /* Flicks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flicks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED54285E1E3683F5000EC5B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED5428601E3683F5000EC5B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +119,8 @@
 				ED54286B1E3683F5000EC5B8 /* LaunchScreen.storyboard */,
 				ED54286E1E3683F5000EC5B8 /* Info.plist */,
 				ED54285D1E3683F5000EC5B8 /* Supporting Files */,
+				ED1841511E396B3D00295866 /* SystemMessageView.h */,
+				ED1841521E396B3D00295866 /* SystemMessageView.m */,
 			);
 			path = Flicks;
 			sourceTree = "<group>";
@@ -147,6 +154,7 @@
 		EDB7E1D01E3843FD00983419 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				ED18414F1E3967B300295866 /* error.png */,
 				EDB7E1D11E38441500983419 /* nowplaying.png */,
 				EDB7E1D21E38441500983419 /* toprated.png */,
 			);
@@ -216,6 +224,7 @@
 			files = (
 				ED54286D1E3683F5000EC5B8 /* LaunchScreen.storyboard in Resources */,
 				EDB7E1D31E38441500983419 /* nowplaying.png in Resources */,
+				ED1841501E3967B300295866 /* error.png in Resources */,
 				ED54286A1E3683F5000EC5B8 /* Assets.xcassets in Resources */,
 				EDB7E1D41E38441500983419 /* toprated.png in Resources */,
 				ED5428681E3683F5000EC5B8 /* Main.storyboard in Resources */,
@@ -280,6 +289,7 @@
 				ED5428651E3683F5000EC5B8 /* ViewController.m in Sources */,
 				ED5428621E3683F5000EC5B8 /* AppDelegate.m in Sources */,
 				ED5428761E368A39000EC5B8 /* MovieCell.m in Sources */,
+				ED1841531E396B3D00295866 /* SystemMessageView.m in Sources */,
 				ED62F6461E36A5A4002B3927 /* Flick.m in Sources */,
 				ED54285F1E3683F5000EC5B8 /* main.m in Sources */,
 				ED9397BB1E36AA2B00E9A8EB /* APICaller.m in Sources */,
