@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="228"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R8f-Ac-qRJ" id="u0E-jf-VNa">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="227.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="228"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffu-k3-UH6">
@@ -118,7 +118,7 @@
                                         <rect key="frame" x="0.0" y="71" width="375" height="228"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YEy-6M-6Yl" id="E0q-pN-V1c">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="227.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F75-oO-OrN">
@@ -255,7 +255,7 @@
         <scene sceneID="Gko-K6-Fh0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Yh-sg-m2M" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Now Playing" image="/Users/leano/Flicks/iconmonstr-video-2-240.png" id="dLq-sF-z2b"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="nowplaying.png" id="dLq-sF-z2b"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eji-Ry-AHn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -274,7 +274,7 @@
         <scene sceneID="NS1-oJ-M72">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IKa-7G-1Nj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Top Rated" image="/Users/leano/Flicks/1485318926_thefreeforty_footage.icns" id="mQz-GD-3vh"/>
+                    <tabBarItem key="tabBarItem" title="Top Rated" image="toprated.png" id="mQz-GD-3vh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w6p-FF-WRt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -291,8 +291,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="/Users/leano/Flicks/1485318926_thefreeforty_footage.icns" width="16" height="16"/>
-        <image name="/Users/leano/Flicks/iconmonstr-video-2-240.png" width="16" height="16"/>
+        <image name="nowplaying.png" width="20" height="20"/>
+        <image name="toprated.png" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gzZ-3I-ELc"/>

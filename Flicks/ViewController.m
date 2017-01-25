@@ -23,7 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.movieTableView.dataSource = self;
-    NSLog(@"restorationIdentifier: %@", self.restorationIdentifier);
+    NSLog(@"toolbarItems: %@", self.tabBarController.toolbarItems);
+
 
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -86,9 +87,18 @@
 //                NSLog(@"FLICK: %@", flick.flickId);
                 [flicks addObject: flick];
             }
+            
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                self.flicks = flicks;
+//                [MBProgressHUD hideHUDForView:self.view animated:YES];
+//                [self performSelectorOnMainThread:@selector(reload) withObject:nil waitUntilDone:NO];
+//            });
+            
             self.flicks = flicks;
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             [self performSelectorOnMainThread:@selector(reload) withObject:nil waitUntilDone:NO];
+            
+            
             
         } else {
             NSLog(@"An error occurred: %@", error.description);

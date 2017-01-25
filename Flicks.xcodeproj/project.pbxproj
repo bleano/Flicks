@@ -18,6 +18,8 @@
 		ED62F6461E36A5A4002B3927 /* Flick.m in Sources */ = {isa = PBXBuildFile; fileRef = ED62F6451E36A5A4002B3927 /* Flick.m */; };
 		ED869B5D1E37D5D00011855B /* FlickDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED869B5C1E37D5D00011855B /* FlickDetailsViewController.m */; };
 		ED9397BB1E36AA2B00E9A8EB /* APICaller.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9397BA1E36AA2B00E9A8EB /* APICaller.m */; };
+		EDB7E1D31E38441500983419 /* nowplaying.png in Resources */ = {isa = PBXBuildFile; fileRef = EDB7E1D11E38441500983419 /* nowplaying.png */; };
+		EDB7E1D41E38441500983419 /* toprated.png in Resources */ = {isa = PBXBuildFile; fileRef = EDB7E1D21E38441500983419 /* toprated.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		ED869B5C1E37D5D00011855B /* FlickDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickDetailsViewController.m; sourceTree = "<group>"; };
 		ED9397B91E36AA2B00E9A8EB /* APICaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APICaller.h; sourceTree = "<group>"; };
 		ED9397BA1E36AA2B00E9A8EB /* APICaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APICaller.m; sourceTree = "<group>"; };
+		EDB7E1D11E38441500983419 /* nowplaying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nowplaying.png; sourceTree = "<group>"; };
+		EDB7E1D21E38441500983419 /* toprated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toprated.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		ED54285C1E3683F5000EC5B8 /* Flicks */ = {
 			isa = PBXGroup;
 			children = (
+				EDB7E1D01E3843FD00983419 /* Images */,
 				ED9397B81E36AA0C00E9A8EB /* APICall */,
 				ED62F6431E36A575002B3927 /* Models */,
 				ED5428601E3683F5000EC5B8 /* AppDelegate.h */,
@@ -137,6 +142,15 @@
 				ED9397BA1E36AA2B00E9A8EB /* APICaller.m */,
 			);
 			name = APICall;
+			sourceTree = "<group>";
+		};
+		EDB7E1D01E3843FD00983419 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EDB7E1D11E38441500983419 /* nowplaying.png */,
+				EDB7E1D21E38441500983419 /* toprated.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +215,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED54286D1E3683F5000EC5B8 /* LaunchScreen.storyboard in Resources */,
+				EDB7E1D31E38441500983419 /* nowplaying.png in Resources */,
 				ED54286A1E3683F5000EC5B8 /* Assets.xcassets in Resources */,
+				EDB7E1D41E38441500983419 /* toprated.png in Resources */,
 				ED5428681E3683F5000EC5B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
