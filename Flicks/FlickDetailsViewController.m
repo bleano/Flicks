@@ -9,7 +9,7 @@
 #import "FlickDetailsViewController.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 
-@interface FlickDetailsViewController ()
+@interface FlickDetailsViewController () <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *flickDetailImageView;
 @property (weak, nonatomic) IBOutlet UITextView *flickTextView;
 @property (weak, nonatomic) IBOutlet UILabel *flickDetailDescription;
@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.flickScrollView.delegate = self;
     NSString *urlString = [NSString stringWithFormat:@"https://image.tmdb.org/t/p/original%@", self.posterPath];
     [self.flickDetailImageView setImageWithURL: [NSURL URLWithString:urlString]];
     self.flickScrollView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0);
@@ -33,6 +34,7 @@
     self.flickTextView.text = self.flickDescription;
     self.flickTextView.textColor = [UIColor whiteColor];
     self.flickTextView.backgroundColor = [UIColor blackColor];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,7 +42,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    targetContentOffset->x = 0;
+    targetContentOffset->y = -180;
+}
 /*
 #pragma mark - Navigation
 
