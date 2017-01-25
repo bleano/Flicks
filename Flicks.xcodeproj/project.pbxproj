@@ -82,6 +82,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ED0FD3AC1E3972E000EDF74C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED5428631E3683F5000EC5B8 /* ViewController.h */,
+				ED5428641E3683F5000EC5B8 /* ViewController.m */,
+				ED869B5B1E37D5D00011855B /* FlickDetailsViewController.h */,
+				ED869B5C1E37D5D00011855B /* FlickDetailsViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		ED5428511E3683F5000EC5B8 = {
 			isa = PBXGroup;
 			children = (
@@ -103,16 +114,13 @@
 		ED54285C1E3683F5000EC5B8 /* Flicks */ = {
 			isa = PBXGroup;
 			children = (
+				ED0FD3AC1E3972E000EDF74C /* Controllers */,
 				EDB7E1D01E3843FD00983419 /* Images */,
 				ED9397B81E36AA0C00E9A8EB /* APICall */,
 				ED62F6431E36A575002B3927 /* Models */,
 				ED5428601E3683F5000EC5B8 /* AppDelegate.h */,
 				ED5428611E3683F5000EC5B8 /* AppDelegate.m */,
-				ED5428631E3683F5000EC5B8 /* ViewController.h */,
-				ED5428641E3683F5000EC5B8 /* ViewController.m */,
 				ED5428661E3683F5000EC5B8 /* Main.storyboard */,
-				ED869B5B1E37D5D00011855B /* FlickDetailsViewController.h */,
-				ED869B5C1E37D5D00011855B /* FlickDetailsViewController.m */,
 				ED5428741E368A39000EC5B8 /* MovieCell.h */,
 				ED5428751E368A39000EC5B8 /* MovieCell.m */,
 				ED5428691E3683F5000EC5B8 /* Assets.xcassets */,
