@@ -95,14 +95,11 @@
 //            });
             
             self.flicks = flicks;
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
             [self performSelectorOnMainThread:@selector(reload) withObject:nil waitUntilDone:NO];
-            
-            
-            
-        } else {
+         } else {
             NSLog(@"An error occurred: %@", error.description);
         }
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     
     }];
 
