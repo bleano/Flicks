@@ -23,6 +23,7 @@
 		ED8651CC1E3A64EE00A90D1A /* 1485472081_Menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8651CA1E3A64EE00A90D1A /* 1485472081_Menu_icon.png */; };
 		ED8651CE1E3A66C400A90D1A /* 1485472577_view-list copy.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8651CD1E3A66C400A90D1A /* 1485472577_view-list copy.png */; };
 		ED8651D11E3A6C3100A90D1A /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8651D01E3A6C3100A90D1A /* CollectionViewCell.m */; };
+		ED8651D41E3A87C000A90D1A /* ProgrammaticCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8651D31E3A87C000A90D1A /* ProgrammaticCollectionViewCell.m */; };
 		ED869B5D1E37D5D00011855B /* FlickDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED869B5C1E37D5D00011855B /* FlickDetailsViewController.m */; };
 		ED9397BB1E36AA2B00E9A8EB /* APICaller.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9397BA1E36AA2B00E9A8EB /* APICaller.m */; };
 		EDB7E1D31E38441500983419 /* nowplaying.png in Resources */ = {isa = PBXBuildFile; fileRef = EDB7E1D11E38441500983419 /* nowplaying.png */; };
@@ -56,6 +57,8 @@
 		ED8651CD1E3A66C400A90D1A /* 1485472577_view-list copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1485472577_view-list copy.png"; sourceTree = "<group>"; };
 		ED8651CF1E3A6C3100A90D1A /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		ED8651D01E3A6C3100A90D1A /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		ED8651D21E3A87C000A90D1A /* ProgrammaticCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammaticCollectionViewCell.h; sourceTree = "<group>"; };
+		ED8651D31E3A87C000A90D1A /* ProgrammaticCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammaticCollectionViewCell.m; sourceTree = "<group>"; };
 		ED869B5B1E37D5D00011855B /* FlickDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickDetailsViewController.h; sourceTree = "<group>"; };
 		ED869B5C1E37D5D00011855B /* FlickDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickDetailsViewController.m; sourceTree = "<group>"; };
 		ED9397B91E36AA2B00E9A8EB /* APICaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APICaller.h; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 				ED1841521E396B3D00295866 /* SystemMessageView.m */,
 				ED8651CF1E3A6C3100A90D1A /* CollectionViewCell.h */,
 				ED8651D01E3A6C3100A90D1A /* CollectionViewCell.m */,
+				ED8651D21E3A87C000A90D1A /* ProgrammaticCollectionViewCell.h */,
+				ED8651D31E3A87C000A90D1A /* ProgrammaticCollectionViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				ED8651D11E3A6C3100A90D1A /* CollectionViewCell.m in Sources */,
 				ED1841531E396B3D00295866 /* SystemMessageView.m in Sources */,
 				ED62F6461E36A5A4002B3927 /* Flick.m in Sources */,
+				ED8651D41E3A87C000A90D1A /* ProgrammaticCollectionViewCell.m in Sources */,
 				ED54285F1E3683F5000EC5B8 /* main.m in Sources */,
 				ED9397BB1E36AA2B00E9A8EB /* APICaller.m in Sources */,
 				ED869B5D1E37D5D00011855B /* FlickDetailsViewController.m in Sources */,

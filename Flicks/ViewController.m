@@ -13,6 +13,7 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import "FlickDetailsViewController.h"
 #import <MBProgressHUD.h>
+#import "ProgrammaticCollectionViewCell.h"
 
 @interface ViewController () <UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *movieTableView;
@@ -34,7 +35,7 @@
     self.systemMessageView.hidden = YES;
     self.movieTableView.dataSource = self;
     self.flickCollectionView.dataSource = self;
-    
+
     //PROGRAMMATIC
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     CGFloat screenWidth = CGRectGetWidth(self.view.bounds);
@@ -42,11 +43,16 @@
     CGFloat itemWidth = screenWidth / 3;
     layout.itemSize = CGSizeMake(itemWidth, itemHeight);
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    layout.minimumLineSpacing = 0;
+    layout.minimumInteritemSpacing = 0;
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    [collectionView registerClass:[ProgrammaticCollectionViewCell class] forCellWithReuseIdentifier:@"ProgrammaticCollectionViewCell"];
     collectionView.backgroundColor = [UIColor magentaColor];
     [self.view addSubview:collectionView];
     collectionView.hidden = YES;
     self.p_collectionView = collectionView;
+    self.p_collectionView.dataSource = self;
+    self.p_collectionView.delegate = self;
     //PROGRAMMATIC
     
     
@@ -170,6 +176,7 @@
     }
     if(index==1) {
         [self.flickCollectionView reloadData];
+        [self.p_collectionView reloadData];
     }
     
 }
@@ -247,17 +254,21 @@
     return str;
 }
 
-//#pragma mark - UICollectionViewDataSource
-//- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-//{
-//    return 20;
-//}
-//
-//
-//- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//}
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 20;
+}
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ProgrammaticCollectionViewCell *movieCell = [self.p_collectionView dequeueReusableCellWithReuseIdentifier:@"ProgrammaticCollectionViewCell"
+        forIndexPath:indexPath];
+    movieCell.flick = [self.flicks objectAtIndex:indexPath.row];
+    [movieCell reloadData];
+    return movieCell;
+}
 
 
 @end
