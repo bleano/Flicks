@@ -14,22 +14,42 @@
 #import "FlickDetailsViewController.h"
 #import <MBProgressHUD.h>
 
-@interface ViewController () <UITableViewDataSource, UICollectionViewDataSource>
+@interface ViewController () <UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *movieTableView;
 @property (weak, nonatomic) IBOutlet UIView *systemMessageView;
 @property (strong, nonatomic) NSArray<Flick *> *flicks;
 @property (weak, nonatomic) IBOutlet UILabel *systemMessageLable;
 @property (weak, nonatomic) IBOutlet UICollectionView *flickCollectionView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *flickCollectionViewModes;
+
+
+//PROGRAMMATIC
+@property (strong, nonatomic)  UICollectionView *p_collectionView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.systemMessageView.hidden = true;
+    self.systemMessageView.hidden = YES;
     self.movieTableView.dataSource = self;
     self.flickCollectionView.dataSource = self;
+    
+    //PROGRAMMATIC
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    CGFloat screenWidth = CGRectGetWidth(self.view.bounds);
+    CGFloat itemHeight = 150;
+    CGFloat itemWidth = screenWidth / 3;
+    layout.itemSize = CGSizeMake(itemWidth, itemHeight);
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    collectionView.backgroundColor = [UIColor magentaColor];
+    [self.view addSubview:collectionView];
+    collectionView.hidden = YES;
+    self.p_collectionView = collectionView;
+    //PROGRAMMATIC
+    
+    
     NSLog(@"toolbarItems: %@", self.tabBarController.toolbarItems);
 
 
@@ -115,7 +135,7 @@
             self.flicks = flicks;
             [self performSelectorOnMainThread:@selector(reload) withObject:nil waitUntilDone:NO];
          } else {
-             self.systemMessageView.hidden = false;
+             self.systemMessageView.hidden = NO;
              self.systemMessageLable.text = @"NetworkError";
             NSLog(@"An error occurred: %@", error.description);
         }
@@ -127,7 +147,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    self.systemMessageView.hidden = true;
+    self.systemMessageView.hidden = YES;
     [self fetchFlicks];
 }
 
@@ -158,14 +178,14 @@
 - (IBAction)onValueChanged:(id)sender {
     float index = self.flickCollectionViewModes.selectedSegmentIndex;
     NSLog(@"flickCollectionViewModes onValueChange %f", index);
-    self.systemMessageView.hidden = true;
-    self.movieTableView.hidden = true;
-    self.flickCollectionView.hidden = true;
+    self.systemMessageView.hidden = YES;
+    self.movieTableView.hidden = YES;
+    self.flickCollectionView.hidden = YES;
     if(index==0) {
-        self.movieTableView.hidden = false;
+        self.movieTableView.hidden = NO;
     }
     if(index==1) {
-        self.flickCollectionView.hidden = false;
+        self.flickCollectionView.hidden = NO;
     }
     [self fetchFlicks];
 }
@@ -227,6 +247,17 @@
     return str;
 }
 
+//#pragma mark - UICollectionViewDataSource
+//- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+//{
+//    return 20;
+//}
+//
+//
+//- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    
+//}
 
 
 @end
