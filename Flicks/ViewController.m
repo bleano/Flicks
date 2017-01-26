@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIView *systemMessageView;
 @property (strong, nonatomic) NSArray<Flick *> *flicks;
 @property (weak, nonatomic) IBOutlet UILabel *systemMessageLable;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *flickCollectionViewModes;
 @end
 
 @implementation ViewController

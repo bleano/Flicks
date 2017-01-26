@@ -100,6 +100,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="K2T-uD-MIQ"/>
                     <connections>
+                        <outlet property="flickCollectionViewModes" destination="fRI-0a-kDe" id="EgR-tA-9Gb"/>
                         <outlet property="flicksLabel" destination="XgX-Or-1Ci" id="Gwv-4w-auo"/>
                         <outlet property="movieTableView" destination="eBY-4z-wEe" id="ntX-Jz-Erj"/>
                         <outlet property="systemMessageLable" destination="HCT-ff-oi1" id="T7n-S8-qY9"/>
@@ -206,6 +207,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mPV-D8-qve"/>
                     <connections>
+                        <outlet property="flickCollectionViewModes" destination="5k3-Dr-dJE" id="fTy-3G-XPU"/>
                         <outlet property="movieTableView" destination="NXj-ba-7Ze" id="miL-WZ-tn9"/>
                         <outlet property="systemMessageLable" destination="aSX-x9-yEh" id="AqX-OT-xDQ"/>
                         <outlet property="systemMessageView" destination="Llt-gC-QHK" id="M5M-YC-Sph"/>
