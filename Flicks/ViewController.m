@@ -30,6 +30,8 @@
     self.systemMessageView.hidden = YES;
     self.movieTableView.dataSource = self;
     self.flickCollectionView.dataSource = self;
+    self.movieTableView.hidden = NO;
+    self.flickCollectionView.hidden = YES;
     NSLog(@"toolbarItems: %@", self.tabBarController.toolbarItems);
 
 
