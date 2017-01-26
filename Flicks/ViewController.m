@@ -137,13 +137,30 @@
     MovieCell *movieCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell" forIndexPath:indexPath];
     [movieCell.posterBody sizeToFit];
     movieCell.titleLabel.text = flick.title;
-    movieCell.posterBody.text = flick.summary;
+    movieCell.posterBody.text = [self getSummary:flick.summary];
     movieCell.flickId = flick.flickId;
     [movieCell.posterImage setImageWithURL: flick.posterURL];
 //    NSLog(@"row number:@%ld", indexPath.row);
     return movieCell;
     
 }
+
+- (NSString*) getSummary: (NSString*)longString{
+    NSArray *listOfWords = [longString componentsSeparatedByString:@" "];
+    NSString *str = @"";
+    int counter = 0;
+    for (NSString *word in listOfWords) {
+        str = [str stringByAppendingString:word];
+        str = [str stringByAppendingString:@" "];
+        counter++;
+        if(counter == 15){
+            str = [str stringByAppendingString:@"..."];
+            return str;
+        }
+    }
+    return str;
+}
+
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section {
     return self.flicks.count;
 }
