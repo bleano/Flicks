@@ -27,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.systemMessageView.hidden = true;
+    self.systemMessageView.hidden = YES;
     self.movieTableView.dataSource = self;
     self.flickCollectionView.dataSource = self;
     NSLog(@"toolbarItems: %@", self.tabBarController.toolbarItems);
@@ -115,7 +115,7 @@
             self.flicks = flicks;
             [self performSelectorOnMainThread:@selector(reload) withObject:nil waitUntilDone:NO];
          } else {
-             self.systemMessageView.hidden = false;
+             self.systemMessageView.hidden = NO;
              self.systemMessageLable.text = @"NetworkError";
             NSLog(@"An error occurred: %@", error.description);
         }
@@ -127,7 +127,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    self.systemMessageView.hidden = true;
+    self.systemMessageView.hidden = YES;
     [self fetchFlicks];
 }
 
@@ -158,14 +158,14 @@
 - (IBAction)onValueChanged:(id)sender {
     float index = self.flickCollectionViewModes.selectedSegmentIndex;
     NSLog(@"flickCollectionViewModes onValueChange %f", index);
-    self.systemMessageView.hidden = true;
-    self.movieTableView.hidden = true;
-    self.flickCollectionView.hidden = true;
+    self.systemMessageView.hidden = YES;
+    self.movieTableView.hidden = YES;
+    self.flickCollectionView.hidden = YES;
     if(index==0) {
-        self.movieTableView.hidden = false;
+        self.movieTableView.hidden = NO;
     }
     if(index==1) {
-        self.flickCollectionView.hidden = false;
+        self.flickCollectionView.hidden = NO;
     }
     [self fetchFlicks];
 }
