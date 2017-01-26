@@ -8,16 +8,18 @@
 
 #import "ViewController.h"
 #import "MovieCell.h"
+#import "CollectionViewCell.h"
 #import "Flick.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import "FlickDetailsViewController.h"
 #import <MBProgressHUD.h>
 
-@interface ViewController () <UITableViewDataSource>
+@interface ViewController () <UITableViewDataSource, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *movieTableView;
 @property (weak, nonatomic) IBOutlet UIView *systemMessageView;
 @property (strong, nonatomic) NSArray<Flick *> *flicks;
 @property (weak, nonatomic) IBOutlet UILabel *systemMessageLable;
+@property (weak, nonatomic) IBOutlet UICollectionView *flickCollectionView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *flickCollectionViewModes;
 @end
 
@@ -27,6 +29,7 @@
     [super viewDidLoad];
     self.systemMessageView.hidden = true;
     self.movieTableView.dataSource = self;
+    self.flickCollectionView.dataSource = self;
     NSLog(@"toolbarItems: %@", self.tabBarController.toolbarItems);
 
 
@@ -130,9 +133,35 @@
 }
 
 - (void) reload{
-    [self.movieTableView reloadData];
+    float index = self.flickCollectionViewModes.selectedSegmentIndex;
+    if(index==0) {
+        [self.movieTableView reloadData];
+    }
+    if(index==1) {
+        [self.flickCollectionView reloadData];
+    }
+    
 }
 
+//-------   SEGMENTED CONTROL
+- (IBAction)onValueChanged:(id)sender {
+    float index = self.flickCollectionViewModes.selectedSegmentIndex;
+    NSLog(@"flickCollectionViewModes onValueChange %f", index);
+    self.systemMessageView.hidden = true;
+    self.movieTableView.hidden = true;
+    self.flickCollectionView.hidden = true;
+    if(index==0) {
+        self.movieTableView.hidden = false;
+    }
+    if(index==1) {
+        self.flickCollectionView.hidden = false;
+    }
+    [self fetchFlicks];
+}
+//-------   SEGMENTED CONTROL
+
+
+//-------  TABLE VIEW
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     Flick *flick = [self.flicks objectAtIndex:indexPath.row];
     MovieCell *movieCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell" forIndexPath:indexPath];
@@ -141,10 +170,34 @@
     movieCell.posterBody.text = [self getSummary:flick.summary];
     movieCell.flickId = flick.flickId;
     [movieCell.posterImage setImageWithURL: flick.posterURL];
-//    NSLog(@"row number:@%ld", indexPath.row);
     return movieCell;
     
 }
+
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section {
+    return self.flicks.count;
+}
+//-------  TABLE VIEW
+
+//-------  COLLECTION VIEW
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    Flick *flick = [self.flicks objectAtIndex:indexPath.row];
+    CollectionViewCell *movieCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionViewCell" forIndexPath:indexPath];
+    [movieCell.imageView setImageWithURL: flick.posterURL];
+    return movieCell;
+}
+
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 2;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 5;
+}
+//-------  COLLECTION VIEW
+
 
 - (NSString*) getSummary: (NSString*)longString{
     NSArray *listOfWords = [longString componentsSeparatedByString:@" "];
@@ -162,9 +215,6 @@
     return str;
 }
 
-- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section {
-    return self.flicks.count;
-}
 
 
 @end
