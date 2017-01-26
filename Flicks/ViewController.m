@@ -36,9 +36,20 @@
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     NSLog(@"prepareForSegue: %@", self.restorationIdentifier);
-    if ([sender isKindOfClass:[MovieCell class]]) {
-        MovieCell *cell = sender;
-        NSIndexPath *indexPath = [self.movieTableView indexPathForCell:cell];
+    if ([sender isKindOfClass:[MovieCell class]] ||
+        [sender isKindOfClass:[CollectionViewCell class]]) {
+        
+        NSIndexPath *indexPath;
+        float index = self.flickCollectionViewModes.selectedSegmentIndex;
+        if(index==0) {
+            MovieCell *cell = sender;
+            indexPath = [self.movieTableView indexPathForCell:cell];
+        }
+        if(index==1) {
+            CollectionViewCell *cell = sender;
+            indexPath = [self.flickCollectionView indexPathForCell:cell];
+        }
+        
         FlickDetailsViewController *flickDetail = [segue destinationViewController];
         Flick *flick = [self.flicks objectAtIndex:indexPath.row];
         flickDetail.flickId = flick.flickId;
@@ -184,17 +195,18 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     Flick *flick = [self.flicks objectAtIndex:indexPath.row];
     CollectionViewCell *movieCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionViewCell" forIndexPath:indexPath];
+    movieCell.flickId = flick.flickId;
     [movieCell.imageView setImageWithURL: flick.posterURL];
     return movieCell;
 }
 
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 2;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 5;
+    return self.flicks.count;
 }
 //-------  COLLECTION VIEW
 
