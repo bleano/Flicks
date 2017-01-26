@@ -23,8 +23,8 @@
     self.flickScrollView.delegate = self;
     NSString *urlString = [NSString stringWithFormat:@"https://image.tmdb.org/t/p/original%@", self.posterPath];
     [self.flickDetailImageView setImageWithURL: [NSURL URLWithString:urlString]];
-    self.flickScrollView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0);
-    CGFloat contentOffsetY = 180 + CGRectGetHeight(self.flickDetailContentView.bounds);
+    self.flickScrollView.contentInset = UIEdgeInsetsMake(60, 0, 0, 0);
+    CGFloat contentOffsetY = 0 + CGRectGetHeight(self.flickDetailContentView.bounds);
     self.flickScrollView.contentSize = CGSizeMake(self.flickScrollView.bounds.size.width, contentOffsetY);
 //    self.flickScrollView.backgroundColor = [UIColor yellowColor];
     self.flickDetailContentView.backgroundColor = [UIColor blackColor];
