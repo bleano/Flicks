@@ -22,7 +22,7 @@ The following **optional** features are implemented:
 - [ ] All images fade in.
 - [ ] For the large poster, load the low-res image first, switch to high-res when complete.
 - [ ] Customize the highlight and selection effect of the cell.
-- [ ] Customize the navigation bar.
+- [X ] Customize the navigation bar.
 - [ ] Tapping on a movie poster image shows the movie poster as full screen and zoomable.
 - [ ] User can tap on a button to play the movie trailer.
 
@@ -32,7 +32,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories (http://i.imgur.com/rKyAvFm.gifv):
+Here's a walkthrough of implemented user stories: http://i.imgur.com/rKyAvFm.gifv
 
 <!--img src='http://i.imgur.com/rKyAvFm.gifv' title='Video Walkthrough' width='' alt='Video Walkthrough' /-->
 
