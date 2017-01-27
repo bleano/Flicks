@@ -2,7 +2,7 @@
 
 FLICKS is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: 45 hours spent in total
+Time spent: 35 hours spent in total
 
 ## User Stories
 
